@@ -1,0 +1,81 @@
+1. Create audio object
+2. Create song list
+3. Track current song index
+4. loadSong(index) → prepares the song
+5. playSong() → plays the audio
+6. pauseSong() → pauses the audio
+7. nextSong() → change index → load → play
+8. previousSong() → change index → load → play
+
+
+
+
+
+
+Creat the audio object 
+    const audio = new Audio()
+
+
+
+1.Create song object. allSongs = [{
+    id: //song number,
+    title:song title,
+    artiste:artiste name,
+    src: location of the song file,
+    cover: clocation of the song cover
+}]
+
+2.Create a variable to access song number
+  let currentSongNumber = 0
+
+3.A function to load the allSongs
+    function loadSong(index){
+        const song = allSongs[index]
+        title.textContent = song.title
+        artiste.textContent = song.artiste
+        audio.src = song.src
+        cover.src = song.cover
+    }
+
+4. A function to play song
+    function playSong(){
+        audio.play()
+        change button states
+        
+    }
+
+5. A function to pause song
+    function pauseSong(){
+        audio.pause()
+        change button states
+    }
+
+6. A function to play next song
+    function nextSong(){
+        currentSongNumber ++
+        //check if song has ended if(currentSongNumber >= allSongs.length){
+                                        currentSongNumber = 0
+        }
+        call load song function
+        call playSong function
+    }
+
+7. A function to play previous song
+    function previousSong(){
+        currentSongNumber --
+        //check if previous song is <0 if(currentSongNumber < 0){
+            currentSongNumber = allSongs.length - 1.//loop back
+        }
+        call load song function
+        call playSong function
+    }
+
+8. Auto play when one song ends
+    Listen for ended on audio and call next song function
+
+9. A function to toggle play/pause
+    function togglePlay(){
+        if audio is paused, call play function else call pause function
+    }
+    
+

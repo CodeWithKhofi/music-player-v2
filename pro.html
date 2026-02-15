@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App - Home</title>
+    <link rel="stylesheet" href="pro.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+<!-- <section id="homePage" class="page-section"></section> -->
+    <section id="homePage" class="page-section">
+      <div class="app-container">
+        <!-- Top Row -->
+        <div class="top-row">
+            <div style="display:flex; align-items:center; gap:0.5rem;">
+                <i class="fas fa-headphones" style="color:#818cf8; font-size:1.5rem;"></i>
+                <h1 class="app-name" style="font-size:1.5rem; font-weight:bold;">KhofiSoundz</h1>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider-round"></span>
+            </label>
+        </div>
+
+        <!-- Categories Section -->
+        <h2 class="app-name">Categories</h2>
+        <div class="categories">
+            <button>Ghana</button>
+            <button>Nigeria</button>
+            <button>Afrobeats</button>
+            <button>Hip-Life</button>
+            <button>Hip-Hop</button>
+            <button>Gospel</button>
+        </div>
+
+        <!-- Featured Section -->
+        <h2 class="app-name">Featured Songs</h2>
+        <div class="song-list">
+
+            
+
+        </div>
+
+        <!-- Mini Player -->
+        <div class="mini-player" onclick="navigateTo('playerPage')">
+            <img src="https://via.placeholder.com/50" alt="" id="mini-player-cover">
+            <div>
+                <h4 class="app-name" id="mini-player-title">Ebezina</h4>
+                <p class="subtext" id="mini-player-artist">Preye</p>
+            </div>
+
+            <div class="player-controls">
+                <i class="fas fa-backward" id="mini-player-backward-btn"></i>
+                <i class="fas fa-pause" id="mini-player-play-btn"></i>
+                <i class="fas fa-forward" id="mini-player-forward-btn"></i>
+            </div>
+        </div>
+      </div>
+    </section>
+  <!-- </section> -->
+
+    
+
+    <!-- Player Page -->
+<section id="playerPage" class="page-section">
+  <div class="player-container">
+    <!-- Header -->
+    <div class="player-header">
+      <button id="back-home" class="icon-btn"><i class="fas fa-chevron-left"></i></button>
+      <h2 class="app-name">Now Playing</h2>
+      <button id="show-playlist" class="icon-btn"><i class="fas fa-list-ul"></i></button>
+    </div>
+
+    <!-- Album Art -->
+    <div class="album-art">
+      <img id="playerAlbumArt" src="https://placehold.co/500x500/4f46e5/ffffff?text=Now+Playing" alt="Album Art">
+    </div>
+
+    <!-- Song Details -->
+    <div class="song-details">
+      <h3 id="playerSongTitle" class="app-name">Starlight Serenade</h3>
+      <p id="playerArtistName">Aura Flow</p>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress">
+      <input type="range" min="0" max="100" value="0" id="progressBar">
+      <div class="progress-time">
+        <span id="currentTime">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button><i class="fas fa-random"></i></button>
+      <button id="prevBtn"><i class="fas fa-backward"></i></button>
+      <div class="play-pause"><button id="play" class="play-btn"><i class="fas fa-pause" id="play-icon"></i></button></div>
+      <button id="nextBtn"><i class="fas fa-forward"></i></button>
+      <button><i class="fas fa-redo"></i></button>
+    </div>
+
+    <!-- Volume -->
+    <div class="volume">
+      <i class="fas fa-volume-down" id="volumeIcon"></i>
+      <input type="range" min="0" max="100" value="50" id="volumeBar">
+      <i class="fas fa-volume-up" id="volumeIcon"></i>
+    </div>
+  </div>
+</section>
+     <!-- Player Page -->
+
+
+<!-- ======================================================= -->
+<!-- 3. PLAYLIST/QUEUE SECTION (Modal) - Newly Added UI -->
+<!-- ======================================================= -->
+<section id="playlistPage" class="page-section">
+  <!-- Modal Content Card -->
+  <div class="modal-card">
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h2 class="app-name">Up Next: Queue</h2>
+      <button onclick="navigateTo('playerPage')" class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Playlist Content (Scrollable) -->
+    <div class="playlist-content">
+      <!-- Current Song (Highlighted) -->
+      <!-- <div class="song-item current">
+        <img src="" alt="Album Art">
+        <div class="song-info">
+          <p class="song-title"></p>
+          <p class="song-artist"></p>
+        </div>
+        <i class="fas fa-music"></i>
+      </div> -->
+
+      <!-- Upcoming Song 1 -->
+      
+
+      
+     
+      
+    </div>
+  </div>
+</section>
+
+
+<script src="pro.js"></script>
+</body>
+
+</html>
