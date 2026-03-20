@@ -13,7 +13,6 @@
 </head>
 
 <body>
-<!-- <section id="homePage" class="page-section"></section> -->
     <section id="homePage" class="page-section">
       <div class="app-container">
         <!-- Top Row -->
@@ -79,13 +78,16 @@
 
     <!-- Album Art -->
     <div class="album-art">
-      <img id="playerAlbumArt" src="https://placehold.co/500x500/4f46e5/ffffff?text=Now+Playing" alt="Album Art">
+      <img id="playerAlbumArt" 
+      src="https://placehold.co/500x500/4f46e5/ffffff?text=Now+Playing" 
+      alt="Album Art">  <!-- Default art...js will replace it with actual image --> 
+      
     </div>
 
     <!-- Song Details -->
     <div class="song-details">
-      <h3 id="playerSongTitle" class="app-name">Starlight Serenade</h3>
-      <p id="playerArtistName">Aura Flow</p>
+      <h3 id="playerSongTitle" class="app-name">Player</h3><!-- Default placeholder for song title -->
+      <p id="playerArtistName">CodeWithKhofi</p><!-- Default placeholder for song artiste -->
     </div>
 
     <!-- Progress Bar -->
@@ -118,7 +120,7 @@
 
 
 <!-- ======================================================= -->
-<!-- 3. PLAYLIST/QUEUE SECTION (Modal) - Newly Added UI -->
+<!-- 3. PLAYLIST/QUEUE SECTION (Modal) - Newly Added UI  hidden by default-->
 <!-- ======================================================= -->
 <section id="playlistPage" class="page-section">
   <!-- Modal Content Card -->
@@ -133,6 +135,8 @@
 
     <!-- Playlist Content (Scrollable) -->
     <div class="playlist-content">
+      <!-- content will be loaded by js -->
+
       <!-- Current Song (Highlighted) -->
       <!-- <div class="song-item current">
         <img src="" alt="Album Art">

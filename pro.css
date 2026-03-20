@@ -17,15 +17,14 @@
   --shadow: rgba(0, 0, 0, 0.4);
 }
 
-
-html{display: none;}
+/* Prevents larger screen display,You can comment it to see how it will look on PC but u might want to enhance the display */
+html{display: none;}  
 @media (max-width: 1023px) {
   html {
     display: block;
   }
 }
 
-/* Center the phone view on desktop */
 body {
     margin: 0;
     padding: 0;
@@ -46,7 +45,6 @@ body {
     height: 100vh;
     overflow: hidden;
     background: var(--bg);
-    /* border-radius: 30px; */
     padding: 25px;
     box-sizing: border-box;
     box-shadow: var(--shadow)
@@ -118,7 +116,6 @@ input:checked + .slider-round::after {
 
 /* Song List */
 .song-list {
-    /* margin-bottom: 60px; */
     max-height: 35vh;
     overflow-y: auto;
 }
@@ -355,12 +352,7 @@ justify-content: space-between;
 .controls button:hover {
   color: var(--accent);
 }
-/* .play-pause{
-  background-color: red;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-} */
+
 .play-btn {
   background: var(--accent);
   padding: 1rem;
@@ -406,7 +398,6 @@ justify-content: space-between;
 .volume input[type="range"] {
   flex-grow: 1;
 }
-/* Player Page */
 
 
 

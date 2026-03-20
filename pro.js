@@ -42,6 +42,7 @@ dayNight.addEventListener("click",() =>{
     dayNight.classList.toggle("dark");
 })
 
+// Song list | contains title,artiste,song and song cover
 allSongs = [
     
     {
@@ -86,6 +87,7 @@ allSongs = [
     src: "music-list/shutup.mp3",
     cover: "covers/shut up.webp"
     },
+    // You can add more songs here
 ];
 
 let currentSongNumber = 0; 
@@ -103,26 +105,15 @@ function loadSong(index){
 
 function playSong(currentSongNumber){
     audio.play();
-    // togglePlay(mainPlayerIcon);   
     updateMiniPlayer();
     updatePlayIcons()
 }
 
 function pauseSong(currentSongNumber){
     audio.pause();
-    // togglePlay(mainPlayerIcon);
     updatePlayIcons();
 }
 
-// function togglePlay(buttonIcon){
-//     if(audio.paused){
-//         buttonIcon.classList.add("fa-play");
-//         buttonIcon.classList.remove("fa-pause");
-//     }else{
-//         buttonIcon.classList.remove("fa-play");
-//         buttonIcon.classList.add("fa-pause");
-//     }
-// }
 
 function updatePlayIcons() {
     const icons = [mainPlayerIcon, miniPlayerPlayIcon];
@@ -236,7 +227,6 @@ allSongs.forEach((track,index) => {
     trackList.addEventListener("click",() =>{
     currentSongNumber = index;
     loadSong(index);
-    // navigateTo("playerPage");
     playSong();
     setActiveTrack(index);
     });
@@ -258,8 +248,7 @@ miniPlayerPreviousBtn.addEventListener("click",() =>{
     previousSong();
 });
 miniPlayerPlayIcon.addEventListener("click",() =>{
-    // playSong(currentSongNumber);
-    // togglePlay(miniPlayerPlayIcon);
+   
     if(audio.paused){
         playSong();
     }else{
@@ -271,7 +260,6 @@ miniPlayerNextBtn.addEventListener("click",() =>{
     nextSong();
 });
 
-// Mini Player
 
 
 // Building the playlist
@@ -299,12 +287,10 @@ playlistContent.appendChild(songItem);
  songItem.addEventListener("click",() =>{
     currentSongNumber = index;
     loadSong(index);
-    // navigateTo("playerPage");
     playSong();
     setActiveTrack(index);
     });
 });
-// Building the playlist
 
 // Playlist Page
 const showPlaylist = document.getElementById("show-playlist");
@@ -331,9 +317,7 @@ volumeBar.addEventListener("input", () => {
         volumeIcon.className = "fas fa-volume-mute";
     } else{volumeBar.value > 0 && volumeBar.value <= 0.5
         volumeIcon.className = "fas fa-volume-down";
-     }// else {
-    //     volumeIcon.className = "fas fa-volume-up";
-    // }
+     }
 });
 
 loadSong(currentSongNumber);
